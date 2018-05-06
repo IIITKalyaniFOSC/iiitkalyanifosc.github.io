@@ -76,21 +76,8 @@
     top : 50px;
     box-sizing: border-box;
   }
-  #post > h1 {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    border-bottom: 1px dotted black;
-  }
-  #post > h6 {
-    margin: 0;
-    padding: 0;
-    color: #a4b0be;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  #post p {
-    font-size: 18px;
+  #content p {
+    font-size: 17px;
   }
   #footer {
     color: grey;
@@ -107,8 +94,8 @@
     text-align: center;
   }
   #banner {
-	  color:white;
-	  font-family: 'Roboto Condensed', sans-serif;
+	color:white;
+	font-family: 'Roboto Condensed', sans-serif;
     background-image:url("img/banner_background.jpg");
     background-position: center;
     background-repeat: repeat;
@@ -122,12 +109,12 @@
   }
   #title {
     display:block;
-	  margin: 20px auto;
+	margin: 20px auto;
     padding:10px;
     width:700px;
-	  text-align:center;
-	  font-size: 32px;
-	  font-weight:400;
+	text-align:center;
+	font-size: 32px;
+	font-weight:400;
     background-color:rgba(255,255,255,1);
     color:black;
     border-radius:20px;
@@ -141,18 +128,131 @@
     justify-content:center;
   }
   #button-bar > a {
-	  background-color: rgba(0,0,0,0.5);
- 	  color:white;
-	  border-radius:20px;
-	  padding:10px 30px;
-	  margin:5px;
-	  box-sizing:border-box;
+	background-color: rgba(0,0,0,0.5);
+ 	color:white;
+	border-radius:20px;
+	padding:10px 30px;
+	margin:5px;
+	box-sizing:border-box;
   }
   #button-bar > a:hover {
-	 background-color: rgba(255,255,255,1);
-	 color:black;
+	background-color: rgba(255,255,255,1);
+	color:black;
   }
+  #tab-header h3{
+    text-align: left;
+  }
+  #tab-group{
+    margin-left: 2em;
+  }
+  .ready{
+    position: relative;
+    margin-bottom: 2em;
+  }
+  #tab-group.ready .tab-header{
+    user-select: none;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 7px 10px;
+  }
+  .ready .tab-header{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: .25em 1em;
+    left: 0;
+    background: #000;
+    border-radius: 4px 4px 0 0;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+  }
+  .ready .tab-header.active{
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-bottom-color: white;
+  }
+  .ready .tab-content{
+    width: 95%;
+    position: relative;
+    top: 0;
+    margin:0;
+    padding: 1em;
+    top: 33px;
+    font-size: 16px;
+    border: 1px solid #000;
+    z-index: 1;
+    background: white;
+    zoom:1;
+  }
+  ::selection{
+    color:white;
+    background-color: black;
+  }
+  .ready .tab-content:after{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+
+  }
+  .ready #tab-header-2{
+    left: 8.5em;
+  }
+  .ready #tab-header-3{
+    left: 16.5em;
+  }
+  .ready .tab-content{
+    display: none;
+  }
+  .ready .tab-content p{
+    margin: 0;
+    padding: 0 0 1em;
+  }
+  .ready .tab-content.active{
+    display: block;
+  }
+
   </style>
+  <script>
+  "use strict";
+
+
+  document.addEventListener('DOMContentLoaded',  function(){
+      document.getElementById('tab-group').className = 'ready';
+
+      var headerClass = 'tab-header',
+          contentClass = 'tab-content';
+
+      var tabHeaders = document.getElementsByClassName(headerClass);
+      for(var i=0; i<tabHeaders.length; i++){
+        tabHeaders[i].addEventListener('click', activateTab);
+      }
+
+      function activateTab(event){
+        var currId = this.id,  //i.e - tab-header-1
+            contentId = currId.replace('header', 'content');   //result: tab-content-1
+            deactivateAllTabs();
+            document.getElementById(currId).className = headerClass +' active';
+            document.getElementById(contentId).className = contentClass +' active';
+      }
+
+      function deactivateAllTabs(){
+        var tabHeader = document.getElementsByClassName(headerClass),
+            tabContents = document.getElementsByClassName(contentClass);
+
+        for(var i=0;i<tabHeaders.length;i++){
+          tabHeader[i].className = headerClass;
+          tabContents[i].className = contentClass;
+        }
+      }
+  });
+
+  </script>
 </head>
 <body>
   <div id="header">
@@ -180,29 +280,38 @@
 		</div>
   </div>
   <div id="content">
-    <div id="post">
-      <h6>April 13, 2018</h6>
-      <h1>Introducing Free and Open Source Community</h1>
-      <p>IIIT Kalyani since long had a culture that encouraged students to take
-      up competitive coding, but there is a another side of the coin.
-      While competitive coding helps significantly in improving one's ability
-      to implement complex logic in code and deepens the understanding
-      of data structures and algorithms. It almost always after a certain level
-      tends to move away from practicality. The work that a professional
-      software engineer/developer does requires additional skills -
-      learning how to contribute to open source projects,
-      latest web technologies, modern mobile app development, robotics,
-      operating systems, database management systems etc. are almost
-      as essential as having a sound background in data structures and
-      algorithms.</p>
+	<div id="tab-group">
+		<h3 class="tab-header active" id="tab-header-1">The Beginning</h3>
+		<div class="tab-content active" id="tab-content-1">
+			<p>The coding club of Indian Institute of Information Technology Kalyani has for long time been thinking of the field of open soure development. s<br> s<br>s<br>s<br>s<br> </p>
+		</div>
 
-      <p>IIIT Kalyani Free and Open Source Community is here to bridge this gap,
-      to create a culture that puts equal emphasis on approach to software
-      development and the underlying implementation/algorithmic details.
-      We regularly organise events to encourage students and promote open
-      source softwares.</p>
+		<h3 class="tab-header" id="tab-header-2">Introduction</h3>
+		<div class="tab-content" id="tab-content-2">
+			<p>IIIT Kalyani since long had a culture that encouraged students to take
+			up competitive coding, but there is a another side of the coin.
+			While competitive coding helps significantly in improving one's ability
+			to implement complex logic in code and deepens the understanding
+			of data structures and algorithms. It almost always after a certain level
+			tends to move away from practicality. The work that a professional
+			software engineer/developer does requires additional skills -
+			learning how to contribute to open source projects,
+			latest web technologies, modern mobile app development, robotics,
+			operating systems, database management systems etc. are almost
+			as essential as having a sound background in data structures and
+			algorithms.</p>
+		</div>
 
-    </div>
+		<h3 class="tab-header" id="tab-header-3">Goal</h3>
+		<div class="tab-content" id="tab-content-3">
+			<p>IIIT Kalyani Free and Open Source Community is here to bridge this gap,
+			to create a culture that puts equal emphasis on approach to software
+			development and the underlying implementation/algorithmic details.
+			We regularly organise events to encourage students and promote open
+			source softwares.</p>
+			<br>d<br>d<br>d<br>
+		</div>
+	</div>
   </div>
   <div id="footer">
     <div id="foot-container">
