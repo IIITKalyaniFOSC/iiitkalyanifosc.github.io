@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+  "use strict";
+
+
+  document.addEventListener('DOMContentLoaded',
+  function(){
+      document.getElementById('tab-group').className = 'ready';
+
+      var headerClass = 'tab-header',
+          contentClass = 'tab-content';
+
+      var tabHeaders = document.getElementsByClassName(headerClass);
+      for(var i=0; i<tabHeaders.length; i++){
+        tabHeaders[i].addEventListener('click', activateTab);
+      }
+
+      function activateTab(event){
+        var currId = this.id,  //i.e - tab-header-1
+            contentId = currId.replace('header', 'content');   //result: tab-content-1
+
+            deactivateAllTabs();
+
+            document.getElementById(currId).className = headerClass +' active';
+            document.getElementById(contentId).className = contentClass +' active';
+      }
+
+      function deactivateAllTabs(){
+        var tabHeader = document.getElementsByClassName(headerClass),
+            tabContents = document.getElementsByClassName(contentClass);
+
+        for(var i=0;i<tabHeaders.length;i++){
+          tabHeader[i].className = headerClass;
+          tabContents[i].className = contentClass;
+        }
+      }
+  });
+
+</script>
+
   <style>
   body {
     margin:0px;
@@ -41,6 +82,7 @@
   }
   #head-container > nav {
     width: 100%;
+  //  background-color: blue;
     color:#57606f;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
@@ -69,6 +111,7 @@
     color:black;
   }
   #content {
+  //  background-color: grey;
     font-family: 'Roboto Condensed', sans-serif;
     width: 1000px;
     margin : 0px auto;
@@ -93,6 +136,8 @@
     font-size: 18px;
   }
   #footer {
+    position: relative;
+    top: 100px;
     color: grey;
     font-size: 14px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -106,52 +151,115 @@
     margin: 0 auto;
     text-align: center;
   }
+
   #banner {
-	  color:white;
-	  font-family: 'Roboto Condensed', sans-serif;
-    background-image:url("img/banner_background.jpg");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
-    width:100%;
-    height: 400px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+	color:white;
+	font-family: 'Roboto Condensed', sans-serif;
   }
   #title {
-    display:block;
-	  margin: 20px auto;
-    padding:10px;
-    width:700px;
-	  text-align:center;
-	  font-size: 32px;
-	  font-weight:400;
-    background-color:rgba(255,255,255,1);
-    color:black;
-    border-radius:20px;
-    box-sizing:border-box;
-  }
-  #button-bar {
-    display:flex;
-    flex-direction:row;
-    margin:auto;
-    width:1000px;
-    justify-content:center;
+	margin: auto;
+	padding:10px;
+	width: 1000px;
+	text-align:center;
+	font-size: 35px;
+	height:80px;
+	font-weight:700;
   }
   #button-bar > a {
-	  background-color: rgba(0,0,0,0.5);
- 	  color:white;
-	  border-radius:20px;
-	  padding:10px 30px;
-	  margin:5px;
-	  box-sizing:border-box;
+	background-color: rgba(0,0,0,0.5);
+	color:white;
+	border-radius:20px;
+	padding:10px 30px;
+	margin:5px;
+	box-sizing:border-box;
   }
   #button-bar > a:hover {
-	 background-color: rgba(255,255,255,1);
-	 color:black;
+	background-color: rgba(255,255,255,1);
+	color:black;
   }
+
+  #tab-header h3{
+    text-align: left;
+  }
+
+  #tab-group{
+    top: 30px;
+    margin-left: 2em;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .ready{
+    position: relative;
+    margin-bottom: 2em;
+  }
+  #tab-group.ready .tab-header{
+    user-select: none;
+    font-weight: normal;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 6px 6px;
+  }
+  .ready .tab-header{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: .25em 1em;
+    left: 0;
+    background: #000;
+    border-radius: 4px 4px 0 0;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+  }
+  .ready .tab-header.active{
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-bottom-color: white;
+  }
+  .ready .tab-content{
+    width: 95%;
+    position: relative;
+    top: 0;
+    margin:0;
+    padding: .5em;
+    top: 33px;
+    font-size: 20px;
+    border: 1px solid #000;
+    z-index: 1;
+    background: #fff;
+    zoom:1;
+  }
+  ::selection{
+    color:white;
+    background-color: black;
+  }
+  .ready .tab-content:after{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+
+  }
+  .ready #tab-header-2{
+    left: 8em;
+  }
+  .ready #tab-header-3{
+    left: 16em;
+  }
+  .ready .tab-content{
+    display: none;
+  }
+  .ready .tab-content p{
+    margin: 0;
+    padding: 0 0 1em;
+  }
+  .ready .tab-content.active{
+    display: block;
+  }
+
+
   </style>
 </head>
 <body>
@@ -170,19 +278,26 @@
       </nav>
     </div>
   </div>
-  <div id="banner">
+  <div id="banner" height="50%" style="background-image:url(img/banner_background.jpg); background-position: center; background-repeat: repeat; background-size: 100%; width:100%; height: 400px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
 		<div id="banner-content">
-			<span id="title">Free and Open Source Community</span>
-			<div id="button-bar">
+			<div id="title">
+				<span style="background-color:rgba(255,255,255,1); color:black;border-radius:20px;padding:10px 80px;margin:5px;box-sizing:border-box;">Free and Open Source Community</span>
+			</div>
+			<div id="button-bar" style="display:flex;flex-direction:row;margin:auto;width:1000px;justify-content:center;" >
 				<a href="#" >Learn More</a>
 				<a href="#" >Join Now</a>
 			</div>
 		</div>
   </div>
-  <div id="content">
-    <div id="post">
-      <h6>April 13, 2018</h6>
-      <h1>Introducing Free and Open Source Community</h1>
+
+  <div id="tab-group">
+    <h3 class="tab-header active" id="tab-header-1">The Beginning</h3>
+    <div class="tab-content active" id="tab-content-1">
+      <p>The coding club of Indian Institute of Information Technology Kalyani has for long time been thinking of the field of open soure development. </p>
+    </div>
+
+    <h3 class="tab-header" id="tab-header-2">Introduction</h3>
+    <div class="tab-content" id="tab-content-2">
       <p>IIIT Kalyani since long had a culture that encouraged students to take
       up competitive coding, but there is a another side of the coin.
       While competitive coding helps significantly in improving one's ability
@@ -195,18 +310,27 @@
       operating systems, database management systems etc. are almost
       as essential as having a sound background in data structures and
       algorithms.</p>
+    </div>
 
+    <h3 class="tab-header" id="tab-header-3">Goal</h3>
+    <div class="tab-content" id="tab-content-3">
       <p>IIIT Kalyani Free and Open Source Community is here to bridge this gap,
       to create a culture that puts equal emphasis on approach to software
       development and the underlying implementation/algorithmic details.
       We regularly organise events to encourage students and promote open
       source softwares.</p>
-
     </div>
   </div>
+
+
+
+
   <div id="footer">
     <div id="foot-container">
-      <i class="fas fa-copyright"></i> IIIT Kalyani Free and Open Source Community | made with <i style="color:red" class="fas fa-heart"></i> by iiitkalyanifosc | theme by <a style="display:inline; color:blue;" href="https://www.github.com/anubhavp28">@anubhavp28</a>
+      <i class="fas fa-copyright"></i> IIIT Kalyani Free and Open Source Community | made with <i style="color:red" class="fas fa-heart"></i> by iiitkalyanifosc | theme by <a href="https://www.github.com/anubhavp28">@anubhavp28</a>
   </div>
+
+  </div>
+
 </body>
 </html>
