@@ -226,8 +226,27 @@
   */
   #event-slider {
     width: 100%;
-    height: 300px;
     background-color: rgb(245,245,245);
+  }
+  .slider-title{
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: black;
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .slider-box {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    background-color: white;
     display: flex;
     flex-direction: row;
   }
@@ -377,21 +396,26 @@
 		</div>
   </div>
   <div id="event-slider">
-    <div id="left-slider-btn">
-      <i class="fas fa-angle-left arrow-btn"></i>
+    <div class="slider-title">
+      Our Events
     </div>
-    <div id="slider-content">
-      <img src="img/poster.jpg">
-      <img src="img/poster.jpg">
-      <img src="img/poster.jpg">
-      <img src="img/poster.jpg">
-      <img src="img/poster.jpg">
-      <img src="img/poster.jpg">
-      <img src="img/poster.jpg">
-      <img src="img/poster.jpg">
-    </div>
-    <div id="right-slider-btn">
-      <i class="fas fa-angle-right arrow-btn"></i>
+    <div class="slider-box">
+      <div id="left-slider-btn">
+        <i class="fas fa-angle-left arrow-btn"></i>
+      </div>
+      <div id="slider-content">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+      </div>
+      <div id="right-slider-btn">
+        <i class="fas fa-angle-right arrow-btn"></i>
+      </div>
     </div>
   </div>
   </div>
