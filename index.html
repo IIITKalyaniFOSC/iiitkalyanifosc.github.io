@@ -92,6 +92,7 @@
     width: 1000px;
     margin: 0 auto;
     text-align: center;
+    user-select: none;
   }
   #banner {
 	color:white;
@@ -139,11 +140,15 @@
 	background-color: rgba(255,255,255,1);
 	color:black;
   }
+
+  /*
+    TabGroup CSS
+  */
   #tab-header h3{
     text-align: left;
   }
   #tab-group{
-    margin-left: 2em;
+    margin-bottom: 4em;
   }
   .ready{
     position: relative;
@@ -176,7 +181,6 @@
     border-bottom-color: white;
   }
   .ready .tab-content{
-    width: 95%;
     position: relative;
     top: 0;
     margin:0;
@@ -217,12 +221,83 @@
     display: block;
   }
 
+  /*
+    Event Slider CSS
+  */
+  #event-slider {
+    width: 100%;
+    background-color: rgb(245,245,245);
+  }
+  .slider-title{
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: black;
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .slider-box {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  #slider-content {
+    display: flex;
+    flex-direction: row;
+    overflow:hidden;
+    align-items: center;
+    scroll-behavior: smooth;
+    user-select: none;
+  }
+  #event-slider #slider-content img {
+    height: 250px;
+    margin: 20px;
+    display:block;
+  }
+  #event-slider #left-slider-btn {
+    width: 100px;
+    height: 300px;
+    margin: auto auto auto 0px;
+    font-size: 30px;
+    vertical-align: middle;
+    line-height: 300px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  #event-slider #right-slider-btn {
+    width: 100px;
+    height: 300px;
+    font-size: 30px;
+    margin: auto 0px auto auto;
+    vertical-align: middle;
+    line-height: 300px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  #event-slider .arrow-btn { 
+    padding: 0.2em 0.4em;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+  }
+  #event-slider .arrow-btn:hover { 
+    background-color : rgb(235,235,235);
+  }
   </style>
   <script>
   "use strict";
 
 
   document.addEventListener('DOMContentLoaded',  function(){
+      // For Tab Group
       document.getElementById('tab-group').className = 'ready';
 
       var headerClass = 'tab-header',
@@ -250,6 +325,14 @@
           tabContents[i].className = contentClass;
         }
       }
+
+      //For Event Slider
+      function scrollSliderContent(amount) {
+        document.getElementById("slider-content").scrollLeft += amount;
+      }
+
+      document.getElementById("right-slider-btn").onclick = function () { scrollSliderContent(200) };
+      document.getElementById("left-slider-btn").onclick = function () { scrollSliderContent(-200) };
   });
 
   </script>
@@ -311,7 +394,30 @@
 			source softwares.</p>
 			<br>d<br>d<br>d<br>
 		</div>
-	</div>
+  </div>
+  <div id="event-slider">
+    <div class="slider-title">
+      Our Events
+    </div>
+    <div class="slider-box">
+      <div id="left-slider-btn">
+        <i class="fas fa-angle-left arrow-btn"></i>
+      </div>
+      <div id="slider-content">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+        <img src="img/poster.jpg">
+      </div>
+      <div id="right-slider-btn">
+        <i class="fas fa-angle-right arrow-btn"></i>
+      </div>
+    </div>
+  </div>
   </div>
   <div id="footer">
     <div id="foot-container">
