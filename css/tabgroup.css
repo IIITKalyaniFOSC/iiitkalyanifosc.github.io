@@ -1,0 +1,79 @@
+/*
+    TabGroup CSS
+  */
+  #tab-header h3{
+    text-align: left;
+  }
+  #tab-group{
+    margin-bottom: 4em;
+  }
+  .ready{
+    position: relative;
+    margin-bottom: 2em;
+  }
+  #tab-group.ready .tab-header{
+    user-select: none;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 7px 10px;
+  }
+  .ready .tab-header{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: .25em 1em;
+    left: 0;
+    background: #000;
+    border-radius: 4px 4px 0 0;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+  }
+  .ready .tab-header.active{
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-bottom-color: white;
+  }
+  .ready .tab-content{
+    position: relative;
+    top: 0;
+    margin:0;
+    padding: 1em;
+    top: 33px;
+    font-size: 16px;
+    border: 1px solid #000;
+    z-index: 1;
+    background: white;
+    zoom:1;
+  }
+  ::selection{
+    color:white;
+    background-color: black;
+  }
+  .ready .tab-content:after{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+
+  }
+  .ready #tab-header-2{
+    left: 8.5em;
+  }
+  .ready #tab-header-3{
+    left: 16.5em;
+  }
+  .ready .tab-content{
+    display: none;
+  }
+  .ready .tab-content p{
+    margin: 0;
+    padding: 0 0 1em;
+  }
+  .ready .tab-content.active{
+    display: block;
+  }
