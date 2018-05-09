@@ -7,10 +7,12 @@
   <link rel='stylesheet' type='text/css' href='css/desktop-style.css'>
   <link rel='stylesheet' type='text/css' href='css/slider.css'>
   <link rel='stylesheet' type='text/css' href='css/tabgroup.css'>
+  <link rel='stylesheet' type='text/css' href='css/mobile-style.css'>
 	
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   <script src="js/slider.js"></script>
   <script src="js/tabgroup.js"></script>
+  <script src="js/mobile-style.js"></script>
 </head>
 
 <body>
@@ -29,6 +31,25 @@
       </nav>
     </div>
   </div>
+  
+  <!--Responsive Navigation DropDown-->
+  <div class="nav-drop">
+    <div id="droplogo">
+      <a href="#">IIITKalyaniFOSC</a>
+    </div>
+    <div class="toggle">
+      <i id="menu-btn" class="fas fa-caret-square-down" onclick="showNavBar()" aria-hidden="true"></i>
+    </div>
+    <ul id="drop-ul" class=" drop-dwn not-active">
+      <li><a href="index.html">about</a></li>
+      <li><a href="events.html">events</a></li>
+      <li><a href="#">projects</a></li>
+      <li><a href="https://medium.com/iiitkalyanifosc">feed</a></li>
+      <li><a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a></li>
+    </ul>
+  </div>
+  
   <div id="banner">
 		<div id="banner-content">
 			<span id="title">Free and Open Source Community</span>
