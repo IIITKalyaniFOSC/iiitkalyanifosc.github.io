@@ -33,7 +33,9 @@
     font-size: 36px;
     margin-left: 50px;
 }
-
+#logo1, .nav-btn{
+	display: none;
+}
 @media screen and (max-width:768px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {
@@ -43,7 +45,10 @@
   #header{
     display: none;
   }
-  #logo{
+  #logo1,.nav-btn{
+	  display: block;
+  }
+  #logo1{
     top: 10px;
     float:left;
     width: 35%;
