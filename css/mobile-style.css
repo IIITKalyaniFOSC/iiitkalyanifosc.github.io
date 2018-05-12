@@ -43,6 +43,31 @@
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
   }
+  .container{
+    text-align: center;
+    margin: 40px;
+    display: block;
+  }
+  .slider{
+    height: 100%;
+  }
+  .slider>div{
+    margin: 40px 0px;
+      border-bottom: 1px solid black;
+  }
+  .slider > div>img{
+    width: 80%;
+  }
+  #preview-img{
+    width: 80%;
+    border: 0px;
+  }
+  #preview-text{
+    font-size: 14px;
+  }
+  #slider-info{
+    display: block;
+  }
   #header{
     display: none;
   }
@@ -65,5 +90,5 @@
     width: 180px;
     text-align: center;
   }
-  
+
 }
