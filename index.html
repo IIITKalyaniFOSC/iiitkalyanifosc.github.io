@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>IIIT KALYANI : FOSC</title>
+  <title>IIIT Kalyani : FOSC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
   <link rel='stylesheet' type='text/css' href='css/desktop-style.css'>
@@ -21,32 +21,39 @@
       <div id="logo">
         <a href="#">IIITKalyaniFOSC</a>
       </div>
-      <nav>
-        <a href="index.html">about</a>
-        <a href="events.html">events</a>
-        <a href="#">projects</a>
-        <a href="https://medium.com/iiitkalyanifosc">feed</a>
-        <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
-        <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
-      </nav>
+      <div id="desktop-nav">
+        <nav>
+          <a href="index.html">about</a>
+          <a href="events.html">events</a>
+          <a href="#">projects</a>
+          <a href="https://medium.com/iiitkalyanifosc">feed</a>
+          <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
+          <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
+        </nav>
+      </div>
+      <div id="mobile-nav">
+        <span id="dropdown-menu-btn" class="deactivated_drop_down" onclick="openNav()"><i class="fas fa-bars"></i></span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">about</a>
+          <a href="#">events</a>
+          <a href="#">projects</a>
+          <a href="#">feed</a>
+          <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
+          <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
+       </div>
+      </div>
+      </div>
     </div>
   </div>
   
   <!--Responsive Navigation DropDown-->
-  <div id="logo1">
+ <!-- <div id="logo1">
    <a href="#">IIITKalyaniFOSC</a>
  </div>
 	 <span class="nav-btn" style="font-size:30px;cursor:pointer;float:right;" onclick="openNav()">&#9776;</span>
-	 <div id="mySidenav" class="sidenav">
-		 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		 <a href="#">About</a>
-		 <a href="#">events</a>
-		 <a href="#">projects</a>
-		 <a href="#">feed</a>
-		 <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
-		 <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
-	</div>
-  
+
+  -->
   <div id="banner">
 		<div id="banner-content">
 			<span id="title">Free and Open Source Community</span>
@@ -55,7 +62,8 @@
 				<a href="#" >Join Now</a>
 			</div>
 		</div>
-  </div>
+  </div> 
+
   <div id="content">
 	<div id="tab-group">
 		<h3 class="tab-header active" id="tab-header-1">The Beginning</h3>
