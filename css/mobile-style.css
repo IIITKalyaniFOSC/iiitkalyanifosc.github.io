@@ -36,7 +36,7 @@
 #logo1, .nav-btn{
 	display: none;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1050px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {
     font-family: 'Roboto Condensed', sans-serif;
@@ -45,24 +45,58 @@
   #header{
     display: none;
   }
-  #logo1,.nav-btn{
+  .nav-btn{
 	  display: block;
+	  position: relative;
+	  right: 10px;
+	  top: 7px;
+	  
+	  
   }
-  #logo1{
-	top: 3px;
-	left: 1px;
-	 position: relative;
+   #logo1{
+  	display: block;
+	top: 5px;
+	left: 10px;
+	position: relative;
     float:left;
-    width: 35%;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 24px;
     font-weight: 300;
     padding : 4px 10px;
     background-color: black;
-    color : white;
+    color: white;
     border-radius: 15px;
-    width: 180px;
+    width: 150px;
     text-align: center;
+    }
+    
+    #headnav {
+    width : 100%;
+    height: 50px;
+    border-bottom: solid 1px #eee;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    }
+}
+
+@media screen and (max-width:470px) {
+
+#title {
+  	left:20px;
+  	top: 100px;
+  	right:20px;
+	margin: 20px auto;
+    padding:10px;
+    max-width:500px;
+	text-align: center;
+	font-size: 32px;
+	font-weight:400;
+    background-color:rgba(255,255,255,1);
+    color: black;
+    border-radius:0px;
+    box-sizing: border-box;
   }
-  
+
+
 }
