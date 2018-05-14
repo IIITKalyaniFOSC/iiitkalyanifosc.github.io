@@ -1,4 +1,27 @@
-/*Responsive Navigation Drop Down*/
+
+#dropdown-menu-btn {
+  display: block;
+  user-select: none;
+  height: 100%;
+  border-radius: 9px;
+  margin:0px;
+  padding: 0px 10px;
+  line-height: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 34px;
+}
+.deactivated_drop_down {
+  background-color: rgb(240,240,240);
+  border: 1px solid rgb(230,230,230);
+  color:black;
+}
+.activated_drop_down {
+  background-color: black;
+  color:white;
+  border: 1px solid black;
+}
   .sidenav {
     height: 100%;
     width: 0;
@@ -37,65 +60,65 @@
 	display: none;
 }
 @media screen and (max-width:1050px) {
-  .sidenav {padding-top: 15px;}
+  #tab-group.ready .tab-header {
+    font-size: 14px;
+  }
+  #content p {
+    font-size: 14px;
+  }
+  #desktop-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display : block;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
   .sidenav a {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
   }
-  #header{
-    display: none;
+  #head-container > #logo {
+    font-size: 20px;
+    padding : 4px 1em;
+    width: initial;
   }
-  .nav-btn{
+  #logo1,.nav-btn{
 	  display: block;
-	  position: relative;
-	  right: 10px;
-	  top: 7px;
-	  
-	  
   }
-   #logo1{
-  	display: block;
-	top: 5px;
-	left: 10px;
-	position: relative;
+  #logo1{
+	  top: 3px;
+	  left: 1px;
+	  position: relative;
     float:left;
+    width: 35%;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 24px;
     font-weight: 300;
     padding : 4px 10px;
     background-color: black;
-    color: white;
+    color : white;
     border-radius: 15px;
-    width: 150px;
+    width: 180px;
     text-align: center;
-    }
-    
-    #headnav {
-    width : 100%;
-    height: 50px;
-    border-bottom: solid 1px #eee;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    }
+  } 
+  #title {
+    font-size: 20px;
+  }
+  #button-bar {
+    font-size: 12px;
+  }
+  #footer {
+    font-size : 12px;
+  }
 }
 
-@media screen and (max-width:470px) {
+@media screen and (max-width:601px) {
 
-#title {
-  	left:20px;
-  	top: 100px;
-  	right:20px;
-	margin: 20px auto;
-    padding:10px;
-    max-width:500px;
-	text-align: center;
-	font-size: 32px;
-	font-weight:400;
-    background-color:rgba(255,255,255,1);
-    color: black;
-    border-radius:0px;
-    box-sizing: border-box;
+#banner {
+	background-size: auto 100%;
+	}
   }
 
 
