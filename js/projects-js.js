@@ -1,4 +1,6 @@
+//project image gallery
 function showPreview(src,name){
+  unfade();
   //src = http://127.0.0.1:8000/img/project1.jpg
   var n = src.search("project");
   var newSrc = src.slice(n,n+8);
@@ -12,6 +14,21 @@ function showPreview(src,name){
   document.getElementById("preview-text").innerHTML = document.getElementsByClassName("slider-text")[parseInt(index)-1].innerHTML  ;
 }
 }
+// JsAnimations
+function unfade() {
+    element = document.getElementById("preview-img");
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 35);
+}
+
 //For Responsive Navigation Bar.
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
