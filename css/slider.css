@@ -1,70 +1,68 @@
-/*
-    Event Slider CSS
-  */
-  #event-slider {
-    width: 100%;
-    background-color: rgb(245,245,245);
-  }
-  .slider-title{
-    width: 100%;
-    padding: 15px 30px;
-    box-sizing: border-box;
-    color: white;
-    font-weight: 400;
-    font-size: 15px;
-    text-transform: uppercase;
-    background-color: black;
-    border: 1px solid black;
-    border-bottom: none;
-    border-radius: 10px 10px 0px 0px;
-  }
-  .slider-box {
-    box-sizing: border-box;
-    border: 1px solid black;
-    width: 100%;
-    height: 300px;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-  }
-  #slider-content {
-    display: flex;
-    flex-direction: row;
-    overflow:hidden;
-    align-items: center;
-    scroll-behavior: smooth;
-    user-select: none;
-  }
-  #event-slider #slider-content img {
-    height: 250px;
-    margin: 20px;
-    display:block;
-  }
-  #event-slider #left-slider-btn {
-    width: 50px;
-    height: 300px;
-    margin: auto auto auto 0px;
-    font-size: 30px;
-    vertical-align: middle;
-    line-height: 300px;
-    text-align: center;
-    flex-shrink: 0;
-  }
-  #event-slider #right-slider-btn {
-    width: 50px;
-    height: 300px;
-    font-size: 30px;
-    margin: auto 0px auto auto;
-    vertical-align: middle;
-    line-height: 300px;
-    text-align: center;
-    flex-shrink: 0;
-  }
-  #event-slider .arrow-btn { 
-    padding: 0.2em 0.4em;
-    border-radius: 20px;
-    transition: background-color 0.5s;
-  }
-  #event-slider .arrow-btn:hover { 
-    background-color : rgb(235,235,235);
-  }
+.slider {
+  margin: 2em 0px;
+  width: 100%;
+  background-color: rgb(245,245,245);
+}
+.slider-title{
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: black;
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+}
+.slider-box {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.slider-content {
+  display: flex;
+  flex-direction: row;
+  overflow:hidden;
+  align-items: center;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+.slider .slider-content img {
+  height: 250px;
+  margin: 20px;
+  display:block;
+}
+.slider .left-slider-btn {
+  width: 50px;
+  height: 300px;
+  margin: auto auto auto 0px;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 300px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.slider .right-slider-btn {
+  width: 50px;
+  height: 300px;
+  font-size: 30px;
+  margin: auto 0px auto auto;
+  vertical-align: middle;
+  line-height: 300px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.slider .arrow-btn { 
+  padding: 0.2em 0.4em;
+  border-radius: 20px;
+  transition: background-color 0.5s;
+}
+.slider .arrow-btn:hover { 
+  background-color : rgb(235,235,235);
+}
