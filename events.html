@@ -1,207 +1,47 @@
 <!doctype html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IIIT KALYANI : FOSC</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' href='css/desktop-style.css'>
   <link rel='stylesheet' type='text/css' href='css/mobile-style.css'>
   <script src="js/mobile-style.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <style>
-  body {
-    margin:0px;
-    background-color: #ffffff;
-  }
-  #header {
-    width : 100%;
-    height: 50px;
-    border-bottom: solid 1px #eee;
-    margin: 0px;
-    padding: 0px;
-    top : 0px;
-  }
-  #head-container {
-    width : 1000px;
-    height: 100%;
-    margin : auto auto;
-    padding : 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  #head-container > #logo {
-    width: 35%;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    padding : 4px 10px;
-    background-color: black;
-    color : white;
-    border-radius: 15px;
-    width: 180px;
-    text-align: center;
-  }
-  #head-container > nav {
-    width: 100%;
-    color:#57606f;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 20px;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    height: 40px;
-  }
-  #head-container a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-  #head-container nav > a {
-    padding : 5px 10px;
-    -webkit-transition: color 1s;
-    -moz-transition: color 1s;
-    -o-transition: color 1s;
-    transition: color 1s;
-
-  }
-  #head-container nav > a:hover {
-    color:black;
-  }
-  #content {
-    font-family: 'Roboto Condensed', sans-serif;
-    width: 1000px;
-    margin : 0px auto;
-    padding: 45px 30px 30px 30px;
-    top : 50px;
-    box-sizing: border-box;
-  }
-  .entry > h1 {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-  //  border-bottom: 1px dotted black;
-  }
-  .entry > h6 {
-    margin: 0;
-    padding: 0;
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  .entry p {
-    font-size: 18px;
-  }
-  .entry {
-    border: 1px solid #f5f5f5;
-    text-decoration: none;
-    display: block;
-    background-color:#f5f5f5;
-    margin: 0 0 30px 0;
-    padding: 25px;
-    box-sizing: border-box;
-    color:black;
-    -webkit-transition: border 0.4s;
-    -moz-transition: border 0.4s;
-    -o-transition: border 0.4s;
-    transition: border 0.4s;
-  }
-  .entry img {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .entry:hover {
-    border: 1px solid #e1e1e1;
-  }
-  .rightarrow {
-    text-align: right;
-    margin: 10px 0 0 0 ;
-    padding: 0;
-    font-size: 30px;
-  }
-  #footer {
-    color: grey;
-    font-size: 14px;
-    font-family: 'Roboto Condensed', sans-serif;
-    border-top: 1px solid #eee;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-  #foot-container {
-    width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  /*#head-container > nav >  ul{
-    width: 65%;
-    background-color: blue;
-    margin: 0;
-    padding: 0;
-  }
-  #head-container > nav > ul > li {
-    list-style: none;
-    float:right;
-  }*/
-/*  #header > nav {
-    width: 600px;
-    margin : 0px auto;
-  }
-  #header  a {
-
-  }
-  #logo {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    background-color: black;
-    color : white;
-    border-radius: 20px;
-    width: 180px;
-    text-align: center;
-  }
-  nav {
-    width: 600px;
-  }
-  nav ul li{
-    display : block;
-    list-style: none;
-  }*/
-  </style>
 </head>
 <body>
-  <div id="header">
+    <div id="header">
     <div id="head-container">
       <div id="logo">
         <a href="#">IIITKalyaniFOSC</a>
       </div>
-      <nav>
-        <a href="index.html">about</a>
-        <a href="events.html">events</a>
-        <a href="#">projects</a>
-        <a href="https://medium.com/iiitkalyanifosc">feed</a>
-        <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
-        <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
-      </nav>
+      <div id="desktop-nav">
+        <nav>
+          <a href="index.html">about</a>
+          <a href="events.html">events</a>
+          <a href="#">projects</a>
+          <a href="https://medium.com/iiitkalyanifosc">feed</a>
+          <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
+          <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
+        </nav>
+      </div>
+      <div id="mobile-nav">
+        <span id="dropdown-menu-btn" class="deactivated_drop_down" onclick="openNav()"><i class="fas fa-bars"></i></span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">about</a>
+          <a href="events.html">events</a>
+          <a href="#">projects</a>
+          <a href="https://medium.com/iiitkalyanifosc">feed</a>
+          <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
+          <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
+       </div>
+      </div>
+      </div>
     </div>
   </div>
   
-  <!--Responsive Navigation DropDown-->
-  <div id="logo1">
-   <a href="#" style="text-decoration:none; color:white;">IIITKalyaniFOSC</a>
- </div>
-	 <span class="nav-btn" style="font-size:30px;cursor:pointer;float:right;" onclick="openNav()">&#9776;</span>
-	 <div id="mySidenav" class="sidenav">
-		 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		 <a href="#">About</a>
-		 <a href="#">events</a>
-		 <a href="#">projects</a>
-		 <a href="#">feed</a>
-		 <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
-		 <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
-	</div>
+
 
   <div id="content">
     <div id="list">
@@ -228,10 +68,6 @@
           </div>
       </a>
     </div>
-<!-- asdasdasdasda
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>sadad<br/><br/><br/><br/><br/><br/>
-<br/><br/><br/>sfssafsf<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>sadad<br/><br/><br/><br/><br/><br/>
-<br/><br/><br/>sfssafsf<br/><br/><br/> -->
   </div>
   <div id="footer">
     <div id="foot-container">

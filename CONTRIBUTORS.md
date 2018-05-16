@@ -3,3 +3,4 @@
 * [Anubhav Patel](https://github.com/anubhavp28)
 * [Abhishek Tiwari](https://github.com/zeus0789)
 * [Pulkit Mishra](https://github.com/PulkitMishra)
+* [Satyam Kumar](https://github.com/satyam-tg)
