@@ -82,20 +82,19 @@ a {
     padding: 0px 30px 50px 30px;
 }
 
-//List
 
 
 
 .pt-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 1.5rem;
 }
 .d-flex {
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .pb-4 {
-  padding-bottom: 1.5rem !important;
+  padding-bottom: 1.5rem;
 }
 
   .badge {
@@ -121,12 +120,11 @@ a {
     min-width: 50px;
 	font-size: 17px;
     border-radius: 50%;
-    margin-right: 1.5rem !important;
+    margin-right: 1.5rem;
 }
 
 
 
-//End Of List
 
   #footer {
     color: grey;
@@ -142,7 +140,7 @@ a {
     margin: 0 auto;
     text-align: center;
     user-select: none;
-  }
+}
   #banner {
 	color:white;
 	font-family: 'Roboto Condensed', sans-serif;
