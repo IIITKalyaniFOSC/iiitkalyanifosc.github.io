@@ -13,4 +13,5 @@ function closeNav() {
     var dropDownButton = document.getElementById("dropdown-menu-btn");
     dropDownButton.classList.remove('activated_drop_down');
     dropDownButton.classList.add('deactivated_drop_down');
+
 }
