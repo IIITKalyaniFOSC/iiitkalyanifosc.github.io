@@ -1,4 +1,6 @@
-
+/*
+ *	This style sheet contains styling rules for the tab-group component. 
+ */
 #tab-header h3{
   text-align: left;
 }
@@ -69,4 +71,14 @@
 }
 .ready .tab-content.active{
   display: block;
+}
+/* 
+	---------------------------------
+	For Mobile Devices
+	---------------------------------
+*/
+@media (max-width:1000px) {
+  #tab-group.ready .tab-header {
+    font-size: 14px;
+  }
 }
