@@ -1,0 +1,199 @@
+#banner {
+  color:white;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image:url("../img/events_background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width:100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#title {
+  padding:10px 30px;
+  margin: 20px auto;
+  font-weight:400;
+  font-size: 20px;
+  text-align: center;
+  background-color:rgba(255,255,255,1);
+  color: black;
+  border-radius:20px;
+  box-sizing: border-box;
+}
+#top-work {
+  padding: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  /*
+    Sticking to space-around rather than space-evenly
+    as Microsoft Edge lacks support for the latter.
+  */
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+  box-sizing:border-box;
+}
+#top-work a {
+  padding: 0px;
+  display: block;
+  border: 1px solid white;
+  height:100%;
+	width:fit-content;
+  margin: 0px 10px;
+  box-sizing:border-box;
+  transition: transform 1s;
+}
+#top-work a > img {
+	display:block;
+	height: 100%;
+}
+#top-work a > .overlay {
+  display:none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+#top-work a:hover{
+  transform: scale(1.02,1.02);
+}
+#top-work a:hover .overlay{
+  display: flex;
+}
+#list {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.entry  h1 {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+.entry h6 {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+}
+.entry p {
+  font-size: 16px;
+}
+.entry {
+  border: 1px solid #f5f5f5;
+  text-decoration: none;
+  display: block;
+  background-color:#f5f5f5;
+  box-sizing: border-box;
+  margin: 20px 0px;
+  color:black;
+  -webkit-transition: border 0.4s;
+  -moz-transition: border 0.4s;
+  -o-transition: border 0.4s;
+  transition: border 0.4s;
+}
+.entry:hover {
+  border: 1px solid #e1e1e1;
+}
+.entry-content {
+	display:flex;
+	flex-direction:row;
+	height:300px;
+	box-sizing:border-box;
+	background-color:rgb(245,245,245);
+	padding:20px;
+}
+.entry-content img {
+	display: block;
+	height: 100%;
+	width: auto;
+}
+.entry-content .text {
+	padding:0px 30px;
+	box-sizing:border-box;
+}
+.rightarrow {
+  text-align: right;
+  margin: 10px 0 0 0 ;
+  padding: 0;
+  font-size: 30px;
+} 
+.read-more {
+  padding-right:15px;
+  box-sizing:border-box;
+  text-align:right;
+  vertical-align:middle;
+  position: relative;
+  bottom:0px;
+  height:50px;
+  width:100%;
+  line-height:50px;
+  background-color:rgb(230,230,230);
+  color:black;
+}
+@media (max-width: 1000px) {
+    /*
+      Maintain the aspect ratio of the top-work div,
+      so the images don't look streched.
+      Height of #top-work = 35% of #top-work width
+    */
+    #top-work {
+      height: 35vw;
+    }
+}
+@media (max-width: 700px) {
+	#title {
+		font-size: 17px;
+	}
+	#top-work {
+    height: 40vw;
+  }
+  #banner {
+    height:  initial;
+    background-size: auto 100%;
+  }
+
+  #top-work {
+    height: initial;
+    display: block;
+  }
+
+  #top-work a {
+    height:  initial;
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  #top-work a > img {
+    box-sizing: border-box;
+    width: 100%;
+		height: initial;
+  }
+
+	.entry-content {
+		flex-direction: column;
+		height: fit-content;
+  }
+	.entry-content img {
+		/* has to set width to 100% explicitly for auto height adjustment*/
+		width: 100%;
+		height: auto;
+	}
+	.entry-content .text {
+		padding: 20px 0px;
+}
