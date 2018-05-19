@@ -38,6 +38,7 @@
   border-bottom-color: white;
 }
 .ready .tab-content{
+	min-height: 130px;
   position: relative;
   top: 0;
   margin:0;
@@ -82,3 +83,27 @@
     font-size: 14px;
   }
 }
+/*-----------------------------
+	Tab-group to be displayed as block objects
+-----------------------------*/
+.resp-tab > .tab-header{
+    padding: 10px;
+    margin: 0;
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .resp-tab > .tab-content{
+    top: 0px;
+    margin-bottom: 20px;
+    background-color: #eee;
+    text-align: center;
+    border: 1px #ddd solid;
+    border-radius: 0px 0px 10px 10px;
+    border-top: 0px;
+    padding: 5px;
+    line-height: 1.25em;
+  }
