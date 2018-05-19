@@ -1,0 +1,76 @@
+/*
+ *	This style sheet contains styling rules for elements that are
+ *	specific to index.html
+ */
+#banner {
+  color:white;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image:url("../img/banner_background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width:100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#banner-content {
+  width: 90%;
+  max-width: 700px;
+}
+#title {
+  display: block;
+  padding:10px;
+  margin: 20px auto;
+  font-weight:400;
+  font-size: 30px;
+  text-align: center;
+  background-color:rgba(255,255,255,1);
+  color: black;
+  border-radius:20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#button-bar {
+  display:flex;
+  flex-direction:row;
+  margin:auto;
+  justify-content:center;
+}
+#button-bar > a {
+  color:white;
+  border-radius:20px;
+  padding:10px 30px;
+  margin:5px;
+  box-sizing:border-box;
+  background-color: rgba(0,0,0,0.5);
+}
+#button-bar > a:hover {
+  background-color: rgba(255,255,255,1);
+  color:black;
+}
+/* 
+	---------------------------------
+	For Mobile Devices
+	---------------------------------
+*/
+@media (max-width:1000px) {
+  #title {
+    font-size: 20px;
+  }
+  #button-bar {
+    font-size: 12px;
+  }
+}
+/*
+	For smaller display
+	make sure the banner background covers the entire
+	banner div
+*/
+@media (max-width:601px) {
+  #banner {
+	background-size: auto 100%;
+  }
+}
