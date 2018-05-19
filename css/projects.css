@@ -7,8 +7,8 @@ body, html, .container{
   line-height: 1.8em;
   color: #666;
 }
-
-/*Header Design*/
+/*
+/*Header Design*//*
 #header {
   width : 100%;
   height: 50px;
@@ -118,7 +118,7 @@ a {
   padding: 20px;
   border-radius: 3px;
 }
-/*Footer Design*/
+/*/*Footer Design*//*
 #footer {
   color: grey;
 
@@ -136,7 +136,7 @@ a {
   user-select: none;
 }
 /*Responsive Navigation Drop Down*/
-
+/*
   .sidenav {
     height: 100%;
     width: 0;
@@ -174,16 +174,16 @@ a {
 #logo1, .nav-btn{
   display: none;
 }
-
+*/
 @media screen and (max-width:768px) {
-  .clearfix{
+  /*.clearfix{
     clear: both;
-  }
+  }*//*
   .sidenav {padding-top: 15px;}
   .sidenav a {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
-  }
+  }*//*
   #header{
     display: none;
   }
@@ -205,7 +205,7 @@ a {
     border-radius: 15px;
     width: 180px;
     text-align: center;
-  }
+  }*/
   .pimg1, .pimg2, .pimg3, .pimg4{
     background-attachment: scroll;
   }
