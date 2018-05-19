@@ -1,9 +1,21 @@
 "use strict";
-  document.addEventListener('DOMContentLoaded',  function(){
-      //For Event Slider
-      function scrollSliderContent(amount) {
-        document.getElementById("slider-content").scrollLeft += amount;
-      }
-      document.getElementById("right-slider-btn").onclick = function () { scrollSliderContent(200) };
-      document.getElementById("left-slider-btn").onclick = function () { scrollSliderContent(-200) };
-  });
+document.addEventListener('DOMContentLoaded',  function(){
+  
+  var rightSliderButtons = document.getElementsByClassName("right-slider-btn");
+  for (var i=0;i<rightSliderButtons.length;i++)
+  {
+    rightSliderButtons[i].addEventListener('click', function () { 
+      var contentDiv = this.parentNode.getElementsByClassName('slider-content');
+      contentDiv[0].scrollLeft += 200; 
+    });
+  }
+
+  var leftSliderButtons = document.getElementsByClassName("left-slider-btn");
+  for (var i=0;i<leftSliderButtons.length;i++)
+  {
+    leftSliderButtons[i].addEventListener('click', function () { 
+      var contentDiv = this.parentNode.getElementsByClassName('slider-content');
+      contentDiv[0].scrollLeft -= 200; 
+    });
+  }
+});

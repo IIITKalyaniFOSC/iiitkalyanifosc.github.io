@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
   <link rel='stylesheet' type='text/css' href='css/common-style.css'>
-  <link rel='stylesheet' type='text/css' href='css/events.css'>
-
-	
+  <link rel='stylesheet' type='text/css' href='css/join.css'>	
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   <script src="js/common-style.js"></script>
 </head>
+
 <body>
   <div id="header">
     <div id="head-container">
@@ -21,7 +20,7 @@
         <nav>
           <a href="index.html">about</a>
           <a href="events.html">events</a>
-          <a href="projects.html">projects</a>
+          <a href="#">projects</a>
           <a href="https://medium.com/iiitkalyanifosc">feed</a>
           <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
           <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
@@ -29,8 +28,8 @@
       </div>
       <div id="mobile-nav">
         <span id="dropdown-menu-btn" class="deactivated_drop_down" onclick="openNav()"><i class="fas fa-bars"></i></span>
-        <div id="sidenav" class="sidenav">
-          <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="index.html">about</a>
           <a href="events.html">events</a>
           <a href="projects.html">projects</a>
@@ -43,59 +42,40 @@
     </div>
   </div>
   <div id="banner">
-			<span id="title">Top Events</span>
-			<div id="top-work">
-        <a href="#"><img src="img/designjam.png">
-          <div class='overlay'><span>Design Jam 2018</span></div>
-        </a>
-        <a href="#"><img src="img/poster.jpg">
-          <div class='overlay'><span>Git & Github Tutorial 2018</span></div>
-        </a>
+		<div id="banner-content">
+			<span id="title">Free and Open Source Community</span>
+			<div id="button-bar">
+				<a href="#" >Learn More</a>
+				<a href="#" >Join Now</a>
 			</div>
-  </div> 
-  <div id="content">
-    <div id="list">
-      <a class='entry' href="#">
-        <div class="entry-content">
-          <img src="img/designjam.png">
-          <div class='text'>
-            <h1>Design Jam 2018</h1>
-            <h6>May 9 - May 23</h6>
-            <p>Design Jam is FOSC's annual design competition.</p>
-          </div>
-        </div>
-        <div class="read-more">
-          Read More&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i>
-        </div>
-      </a>
-      <a class='entry' href="#">
-        <div class="entry-content">
-          <img src="img/designjam.png">
-          <div class='text'>
-            <h1>Design Jam 2018</h1>
-            <h6>May 9 - May 23</h6>
-            <p>Design Jam is FOSC's annual design competition.</p>
-          </div>
-        </div>
-        <div class="read-more">
-          Read More&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i>
-        </div>
-      </a>
-      <a class='entry' href="#">
-        <div class="entry-content">
-          <img src="img/designjam.png">
-          <div class='text'>
-            <h1>Design Jam 2018</h1>
-            <h6>May 9 - May 23</h6>
-            <p>Design Jam is FOSC's annual design competition.</p>
-          </div>
-        </div>
-        <div class="read-more">
-          Read More&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i>
-        </div>
-      </a>
 		</div>
-	</div>
+  </div> 
+
+  <div id ="content" class="pt-4">
+	<h1>Come, build some cool kickass stuff!</h1>
+	<ol>
+		<li class="d-flex pb-4">
+			<span class="badge badge-circle">Step 1</span>
+			Go ahead and sign up for a GitHub account. If you already have one, well that's great buddy!
+		</li>
+		<li class="d-flex pb-4">
+			<span class="badge badge-circle">Step 2</span>
+			We use Slack for communication. So, you'll need a Slack account too.
+		</li>
+		<li class="d-flex pb-4">
+			<span class="badge badge-circle">Step 3</span>
+			 Done with that? Cool. Now, head over to IIIT Kalyani FOSC workspace and in the intro channel introduce yourself.
+		</li>
+		<li class="d-flex pb-4">
+			<span class="badge badge-circle">Step 4</span>
+			 Tell us your name(Like.. Duh!), your batch, any programming skils that you possess and of course your GitHub id.
+		</li>
+		<li class="d-flex">
+			<span class="badge badge-circle">Step 5</span>
+			 Voila! That's it. And we are in this together mate.
+		</li>
+	</ol>
+</div>
   <div id="footer">
     <div id="foot-container">
       <i class="fas fa-copyright"></i> IIIT Kalyani Free and Open Source Community | made with <i style="color:red" class="fas fa-heart"></i> by iiitkalyanifosc | theme by <a style="display:inline; color:blue;" href="https://www.github.com/anubhavp28">@anubhavp28</a>
