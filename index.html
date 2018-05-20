@@ -9,12 +9,25 @@
 	<link rel='stylesheet' type='text/css' href='css/index.css'>
   <link rel='stylesheet' type='text/css' href='css/slider.css'>
   <link rel='stylesheet' type='text/css' href='css/tabgroup.css'>
+  <link rel="stylesheet" type='text/css' href="css/preloader.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   <script src="js/common-style.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/tabgroup.js"></script>
+  <script src="js/preloader.js"></script>
 </head>
-<body onload="tabActivator()" onresize="tabActivator()">
+<body id="overflow" class="overflow" onload="tabActivator()" onresize="tabActivator()">
+
+	<div id="overlay">
+		<div id="quote-board">
+		</div>
+		<div class="loader-frame">
+			<div class="loader1" id="loader1"></div>
+			<div class="loader2" id="loader2"></div>
+		</div>
+	</div>
+
+
   <div id="header">
     <div id="head-container">
       <div id="logo">
