@@ -18,25 +18,30 @@ window.addEventListener('load', function(){
             "The biggest risk is not taking any risk... In a world that changing really quickly, the only strategy that is guaranteed to fail is not taking risks."];
   peeps = ['Linus Torvalds','Harold Abelson','John Woods','Kent Beck','Steve Jobs','Bill Gates','Fred Brooks','Patrick McKenzie','Andy Hunt','Mark Zukerberg'];
   
-  
-  var preload = document.getElementById("overlay");
+
   //Creates a random number for index 
   var index = Math.floor(Math.random()*10);
   document.getElementById("quote-board").innerHTML = "\""+quotes[index]+"\" <br> -"+peeps[index];
+  preloaderMain();
+});
+
+function preloaderMain(){
+	  
+  var preload = document.getElementById("overlay");
   var loading = 0;
   var id = setInterval(frame, 64);
 
   function frame(){
-    if(loading == 70){
+    if(loading == 60){
       clearInterval(id);
       document.getElementById("overflow").className = " ";
       overlay.style.display = "none";
     }
     else{
       loading = loading + 1;
-      if(loading==60){
+      if(loading==50){
       preload.style.animation = "fadeout 1s ease";
     }
     }
   }
-});
+}
