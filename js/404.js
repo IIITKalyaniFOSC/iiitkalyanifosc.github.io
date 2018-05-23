@@ -18,6 +18,6 @@ function changetext(){
   
 }
 
-window.onload = function() {
-	changetext();
-}
+document.addEventListener("DOMContentLoaded", function(event) {
+    changetext();
+});
