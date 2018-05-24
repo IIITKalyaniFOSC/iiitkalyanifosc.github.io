@@ -48,8 +48,5 @@ function preloaderMain(){
     }
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> refs/remotes/origin/master
+
