@@ -1,0 +1,389 @@
+/* 
+	------------------------
+	CSS specific to 404 page
+	------------------------
+*/
+
+
+
+body {
+margin: 0px;
+}
+
+.alpha {
+background-image: url("../img/projects_back.jpg");
+height:100%;
+width:100%;
+min-height: 100%;
+opacity: 0.8;
+color: white;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.message404 {
+background-color: black;
+border-radius: 5px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+display: block;
+position: fixed;
+height: 75%;
+width: 80%;
+left: 50%;
+top:50%;
+transform: translate(-50%, -50%);
+min-height: 200px;
+max-width: 1200px;
+max-height: 700px;
+}
+
+.message404:hover {
+box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+opacity: 1.0;
+}
+
+.buttons404{
+
+}
+
+.circle {
+height: 20px;
+width: 20px;
+margin-top: 8px;
+border-radius: 50%;
+display: inline-block;
+}
+
+.circle1 {
+background-color: #558b2f;
+margin-left: 8px;
+}
+
+.circle2 {
+background-color: #ffab00;
+margin-left: 2px;
+}
+
+.circle3 {
+background-color: #ff1744;
+margin-left: 2px;
+}
+
+.error404 {
+font-size: 100pt;
+font-family: 'Share Tech Mono', monospace;
+color: white;
+text-align: center;
+margin-top: 0.75em;
+}
+
+.text404{
+color: white;
+display: inline-block;
+font-family: 'Ubuntu Mono', monospace;
+text-align: center;
+margin: 2em;
+font-size: 30px;
+}
+
+.homebutton404 {
+display: flex;
+align-items: center;
+justify-content: center;
+bottom: 1em;
+position: absolute;
+left:50%;
+transform: translate(-50%, 0);
+font-size: 30pt;
+}
+
+.homebutton404 > a{
+margin: 0.18em;
+padding: 0.25em;
+color: white;
+border-radius: 1em;
+background-color: #424242;
+}
+
+.button1:hover {
+background-color: #558b2f;
+}
+
+.button2:hover {
+background-color: #ffab00;
+}
+
+.button3:hover {
+background-color: #ff1744;
+}
+
+.button4:hover {
+background-color: cyan;
+}
+
+
+
+/* 
+	--------------------------------------------------------------------------------------------------------------------------
+	Media queries for different resolutions. A lot of them are needed as no scrolling is permissible. Min resolution : 320x320
+	--------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+@media (max-height:900px){
+.error404 {
+font-size: 80pt;
+}
+
+.text404{
+font-size: 20pt;
+}
+}
+
+
+@media (max-height:775px){
+.error404 {
+font-size: 80px;
+margin-top: 0.40em;
+}
+
+.text404{
+font-size: 20px;
+}
+
+.homebutton404 {
+font-size: 27px;
+}
+}
+
+@media (max-height:520px){
+.error404 {
+font-size: 60px;
+margin-top: 0.40em;
+}
+
+.text404{
+font-size: 16px;
+padding: 1em;
+}
+
+.homebutton404 {
+font-size: 25px;
+}
+}
+
+@media (max-height:440px){
+.error404 {
+font-size: 40px;
+margin-top: 0.30em;
+}
+
+.text404{
+font-size: 14px;
+padding: 0.65em;
+}
+
+.homebutton404 {
+font-size: 20px;
+}
+}
+
+@media (max-width:800px){
+.error404 {
+font-size: 80pt;
+}
+
+.text404{
+font-size: 20pt;
+}
+}
+
+@media (max-height:880px) and (max-width:800px){
+.error404 {
+font-size: 80px;
+}
+
+.text404{
+font-size: 20px;
+}
+
+.homebutton404 {
+font-size: 27px;
+}
+}
+
+@media (max-height:600px) and (max-width:800px){
+.error404 {
+font-size: 70px;
+margin-top: 0.40em;
+}
+
+.text404{
+font-size: 18px;
+}
+
+.homebutton404 {
+font-size: 25px;
+}
+}
+
+
+@media (max-height:485px) and (max-width:800px){
+.error404 {
+font-size: 58px;
+margin-top: 0.35em;
+}
+
+.text404{
+font-size: 16px;
+}
+
+.homebutton404 {
+font-size: 23px;
+}
+}
+
+@media (max-height:400px) and (max-width:800px){
+.error404 {
+font-size: 38px;
+margin-top: 0.20em;
+}
+
+.text404{
+font-size: 13px;
+}
+
+.homebutton404 {
+font-size: 20px;
+}
+}
+
+@media (max-width:575px){
+.error404 {
+font-size: 80pt;
+}
+
+.text404{
+font-size: 20px;
+}
+
+.homebutton404 {
+font-size: 27px;
+}
+}
+
+@media (max-height:830px) and (max-width:575px){
+.error404 {
+font-size: 80px;
+margin-top: 0.60em;
+}
+
+.text404{
+font-size: 17px;
+}
+
+.homebutton404 {
+font-size: 25px;
+}
+}
+
+@media (max-height:630px) and (max-width:575px){
+.error404 {
+font-size: 70px;
+margin-top: 0.40em;
+}
+
+.text404{
+font-size: 16px;
+margin: 1em;
+}
+
+.homebutton404 {
+font-size: 24px;
+}
+}
+
+@media (max-height:500px) and (max-width:575px){
+.error404 {
+font-size: 40px;
+margin-top: 0.20em;
+}
+
+.text404{
+font-size: 13px;
+margin: 1em;
+}
+
+.homebutton404 {
+font-size: 16px;
+}
+}
+
+@media (max-width:300px){
+.error404 {
+font-size: 70px;
+margin-top: 0.40em;
+}
+
+.text404{
+font-size: 20px;
+margin: 1em;
+}
+
+.homebutton404 {
+font-size: 22px;
+}
+}
+
+@media (max-height:768px) and (max-width:300px){
+.error404 {
+font-size: 50px;
+margin-top: 0.40em;
+}
+
+.text404{
+font-size: 18px;
+margin: 1em;
+}
+
+.homebutton404 {
+font-size: 19px;
+}
+}
+
+@media (max-height:640px) and (max-width:300px){
+.error404 {
+font-size: 50px;
+margin-top: 0.40em;
+}
+
+.text404{
+font-size: 15px;
+margin: 1em;
+}
+
+.homebutton404 {
+font-size: 18px;
+}
+}
+
+@media (max-height:480px) and (max-width:300px){
+.error404 {
+font-size: 34px;
+margin-top: 0.10em;
+}
+
+.text404{
+font-size: 14px;
+margin: 1em;
+}
+
+.homebutton404 {
+font-size: 15px;
+}
+}
+

@@ -4,8 +4,7 @@ window.addEventListener('load', function(){
 
   var qoutes = new Array();
   var peeps = new Array();
-  //Add new quotes in this array.
-  //Minimum number of quotes required is 10--!important
+//Add new quotes in this array.
   quotes = ["Talk is cheap. Show me the code.",
             "Programs must be written for people to read, and only incidentally for machines to execute.",
             "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
@@ -19,10 +18,15 @@ window.addEventListener('load', function(){
   peeps = ['Linus Torvalds','Harold Abelson','John Woods','Kent Beck','Steve Jobs','Bill Gates','Fred Brooks','Patrick McKenzie','Andy Hunt','Mark Zukerberg'];
   
 
-  //Creates a random number for index 
-  var index = Math.floor(Math.random()*10);
+//Creates a random number for index 
+if (peeps.length == quotes.length){  
+  var index = Math.floor(Math.random()*quotes.length);
   document.getElementById("quote-board").innerHTML = "\""+quotes[index]+"\" <br> -"+peeps[index];
   preloaderMain();
+  }
+else {
+  console.error("The lengths of quotes and peeps do not match");
+  }  
 });
 
 function preloaderMain(){
@@ -44,4 +48,8 @@ function preloaderMain(){
     }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> refs/remotes/origin/master
