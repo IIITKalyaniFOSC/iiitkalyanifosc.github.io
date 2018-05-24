@@ -1,33 +1,38 @@
 .loader-frame{
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right: 0;
+  font-size: 20px;
+  width: 4em;
+  height: 4em;
+  position: relative;
   margin: auto;
+  margin-top: 1em;
+}
+
+.preloadercontainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /*Preloader design*/
 .loader1, .loader2 {
   position: absolute;
-  border: 5px solid transparent;
+  border: 0.25em solid transparent;
   border-radius: 50%;
 }
 .loader1{
-  width: 70px;
-  height: 70px;
-  border-top: 5px solid azure;
-  border-bottom: 5px solid azure;
+  width: 3.50em;
+  height: 3.50em;
+  border-top: 0.25em solid azure;
+  border-bottom: 0.25em solid azure;
   animation: clockwise 2s linear 3;
 }
 .loader2{
-  width: 60px;
-  height: 60px;
-  border-left: 5px solid red;
-  border-right: 5px solid red;
-  top: 5px;
-  left: 5px;
+  width: 3em;
+  height: 3em;
+  border-left: 0.25em solid red;
+  border-right: 0.25em solid red;
+  top: 0.25em;
+  left: 0.25em;
   animation: anticlockwise 2s linear 3;
 }
 /*preloader animation*/
@@ -50,7 +55,6 @@
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 20px;
   color: white;
-  height: 100px;
   width: 80%;
   text-align: center;
   position: relative;
@@ -73,3 +77,40 @@
 .overflow{
     overflow-y: hidden;
   }
+  
+@media (max-width: 512px) {
+#quote-board{
+  font-size: 15px;
+}
+
+.loader-frame{
+  font-size: 15px;
+}
+}  
+
+@media (max-height: 512px) {
+#quote-board{
+  font-size: 15px;
+}
+
+.loader-frame{
+  font-size: 15px;
+}
+}
+
+@media (max-height: 300px) {
+#quote-board{
+  font-size: 15px;
+}
+
+.loader-frame{
+  font-size: 10px;
+}
+}
+
+@media (max-width: 800px) and (max-height: 512px){
+#quote-board{
+  font-size: 13px;
+  width: 90%;
+}
+}  
