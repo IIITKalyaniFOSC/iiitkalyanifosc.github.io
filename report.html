@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Report.</title>
+  <link href="css/report-css.css" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto+Condensed" rel="stylesheet">
+  <script type="text/javascript" src="js/report-js.js"></script>
+</head>
+<body>
+  <div class="content" id="content">
+  <div class="head">
+    <h2>Report that <img style="height:80px; width: 80px;" src="img/bug.png">.</h2>
+  </div>
+  <div class="form">
+    <form id="form"action="#">
+      <label for="fname">Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  	    <label for="email">Email-id</label>
+  	    <input type="email" name="emailid" placeholder="abc@blahblah.com">
+
+        <label for="bug">Type of Bug</label>
+        <select class="bug-select" name="">
+          <option value="">Bug in display</option>
+          <option value="">Bug in Responsiveness</option>
+          <option value="">Bug in browser support</option>
+          <option value="">Bug in data displayed</option>
+          <option value="">-Other-</option>
+        </select>
+  	    <label for="subject">Subject</label>
+  	    <textarea id="subject" name="subject" placeholder="Tell us about the bug.." style="height:100px"></textarea>
+
+  	    <input type="submit" value="Submit" onClick="alert('Bug Reported!! Thanks.')">
+    	</form>
+    </div>
+
+    <div class="contact">
+        <button type="button" name="button" onclick="popUp()">Contact Club Moderators.</button>
+    </div>
+  </div>
+
+  <div id="overlay">
+  <div id="club-info">
+    <div class="card">
+      <img src="img/andrew.png" alt="">
+      <a href="https://github.com/zeus0789" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <p>Abhishek Tiwari</p>
+    </div>
+
+    <div class="card">
+      <img src="img/andrew.png" alt="">
+      <a href="https://github.com/anubhavp28" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <p>Anubhav Patel</p>
+    </div>
+
+    <div class="card">
+      <img src="img/andrew.png" alt="">
+      <a href="https://github.com/PulkitMishra" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <p>Pulkit Mishra</p>
+    </div>
+
+    <div class="card">
+      <img src="img/andrew.png" alt="">
+      <a href="https://github.com/Satyam-TG" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <p>Satyam Kumar</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
