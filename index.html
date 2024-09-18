@@ -1,160 +1,35 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>IIIT Kalyani : FOSC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
-  <link rel='stylesheet' type='text/css' href='css/common-style.css'>
-  <link rel='stylesheet' type='text/css' href='css/index.css'>
-  <link rel='stylesheet' type='text/css' href='css/slider.css'>
-  <link rel='stylesheet' type='text/css' href='css/tabgroup.css'>
-  <link rel="stylesheet" type='text/css' href="css/preloader.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="js/common-style.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/tabgroup.js"></script>
-  <script src="js/preloader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freescape IIITK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: calc(24px + 2vw);
+        }
+        p {
+            font-size: calc(14px + 0.5vw);
+        }
+    </style>
 </head>
-<body id="overflow" class="overflow" onload="tabActivator()" onresize="tabActivator()">
+<body>
+    <h1>Aarambh 3.0</h1>
+    <p>Hi Folks,<br>
+      Are you new to programming? Or maybe you've been into tech since you were in 10th grade? This event is for all of you. We'll be talking about various domains in the software industry and how to get started with them. Explore various domains, pick your interest and excel. <br><br>
+    Date: 19th and 20th September 2024<br>
+    Time: 5:00pm on both days.<br>
+      Venue: G02<br><br>
 
-	<div id="overlay">
-		<div class ="preloadercontainer">
-		<div id="quote-board">
-		</div>
-		<div class="loader-frame">
-			<div class="loader1" id="loader1"></div>
-			<div class="loader2" id="loader2"></div>
-		</div>
-		</div>
-	</div>
-
-
-  <div id="header">
-    <div id="head-container">
-      <div id="logo">
-        <a href="#">IIITKalyaniFOSC</a>
-      </div>
-      <div id="desktop-nav">
-        <nav>
-          <a href="index.html">about</a>
-          <a href="events.html">events</a>
-          <a href="projects.html">projects</a>
-          <a href="https://medium.com/iiitkalyanifosc">feed</a>
-          <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
-          <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
-        </nav>
-      </div>
-      <div id="mobile-nav">
-        <span id="dropdown-menu-btn" class="deactivated_drop_down" onclick="openNav()"><i class="fas fa-bars"></i></span>
-        <div id="sidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="index.html">about</a>
-          <a href="events.html">events</a>
-          <a href="projects.html">projects</a>
-          <a href="https://medium.com/iiitkalyanifosc">feed</a>
-          <a href="https://github.com/IIITKalyaniFOSC"><i class="fab fa-github"></i></a>
-          <a href="https://iiitkalyanifosc.slack.com/"><i class="fab fa-slack-hash"></i></a>
-       </div>
-      </div>
-      </div>
-    </div>
-  </div>
-  <div id="banner">
-		<div id="banner-content">
-			<span id="title">Free and Open Source Community</span>
-			<div id="button-bar">
-				<a href="#" >Learn More</a>
-				<a href="join.html" >Join Now</a>
-			</div>
-		</div>
-  </div> 
-
-  <div id="content">
-
-	<div id="tab-group">
-    
-    <h3 class="tab-header active" id="tab-header-1">The Beginning</h3>
-		<div class="tab-content active" id="tab-content-1">
-			<p>The coding club of Indian Institute of Information Technology Kalyani has for long time been thinking of the field of open soure development.<br> Free and Open Source Software (FOSS) has become an international phenomenon, moving from relative obscurity to being the latest buzzword in a few short years. However, there is still a lack of understanding about what really constitutes FOSS and the ramifications of this new concept.This was precisely why we felt that the students of this prestigious institiute should absorb this concept right from the start.<br></p>
-		</div>
-
-		<h3 class="tab-header" id="tab-header-2">Introduction</h3>
-		<div class="tab-content" id="tab-content-2">
-			<p>IIIT Kalyani since long had a culture that encouraged students to take
-			up competitive coding, but there is a another side of the coin.
-			While competitive coding helps significantly in improving one's ability
-			to implement complex logic in code and deepens the understanding
-			of data structures and algorithms. It almost always after a certain level
-			tends to move away from practicality. The work that a professional
-			software engineer/developer does requires additional skills -
-			learning how to contribute to open source projects,
-			latest web technologies, modern mobile app development, robotics,
-			operating systems, database management systems etc. are almost
-			as essential as having a sound background in data structures and
-			algorithms.</p>
-		</div>
-
-		<h3 class="tab-header" id="tab-header-3">Goal</h3>
-		<div class="tab-content" id="tab-content-3">
-			<p>IIIT Kalyani Free and Open Source Community is here to bridge this gap,
-			to create a culture that puts equal emphasis on approach to software
-			development and the underlying implementation/algorithmic details.
-			We regularly organise events to encourage students and promote open
-			source softwares.Free and open source society matters, especially for students and young developers because it is real and because the students can really look into the source code, understand it, contribute to it and ultimately learn about the technology in the process. Without FOSS, anyone looking for a real world experience in contributing to the world of open source software development will face disappointment.</p>
-    </div>
-
-  </div>
-  <div id="events-slider" class="slider">
-    <div class="slider-title">
-      Our Events
-    </div>
-    <div class="slider-box">
-      <div class="left-slider-btn">
-        <i class="fas fa-angle-left arrow-btn"></i>
-      </div>
-      <div class="slider-content">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-      </div>
-      <div class="right-slider-btn">
-        <i class="fas fa-angle-right arrow-btn"></i>
-      </div>
-    </div>
-  </div>
-  <div id="projects-slider" class="slider">
-    <div class="slider-title">
-      Our Projects
-    </div>
-    <div class="slider-box">
-      <div class="left-slider-btn">
-        <i class="fas fa-angle-left arrow-btn"></i>
-      </div>
-      <div class="slider-content">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-        <img src="img/poster.jpg">
-      </div>
-      <div class="right-slider-btn">
-        <i class="fas fa-angle-right arrow-btn"></i>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div id="footer">
-    <div id="foot-container">
-      <i class="fas fa-copyright"></i> IIIT Kalyani Free and Open Source Community | made with <i style="color:red" class="fas fa-heart"></i> by iiitkalyanifosc | theme by <a style="display:inline; color:blue;" href="https://www.github.com/anubhavp28">@anubhavp28</a>
-  </div>
+      If you're planning on coming, please fill up this <a href="https://forms.gle/DMdP8fCvf85obTF98">Google Form<a/></p>
 </body>
 </html>
