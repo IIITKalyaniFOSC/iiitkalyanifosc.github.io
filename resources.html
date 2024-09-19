@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freescape IIITK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: calc(24px + 2vw);
+        }
+        p {
+            font-size: calc(14px + 0.5vw);
+        }
+        h2 {
+            font-size: calc(20px + 1.5vw);
+        }
+        h3 {
+            font-size: calc(18px + 1vw);
+        }
+        ul {
+            font-size: calc(14px + 0.5vw);
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resources</h1>
+    <h3>(This is in progress and will be updated)<br>All current links are AI generated</h3>
+
+    <h2>Setting Up Development Environment</h2>
+    <h3>Code Editors and IDEs</h3>
+    <ul>
+        <li><a href="https://code.visualstudio.com/docs/setup/setup-overview">Visual Studio Code</a> - Popular, lightweight code editor</li>
+        <li><a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a> - Comprehensive IDE for various programming languages</li>
+        <li><a href="https://cursor.sh/">Cursor</a> - AI-powered code editor for efficient development</li>
+        <li><a href="https://neovim.io/doc/user/">Neovim</a> - Hyperextensible Vim-based text editor</li>
+        <li><a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html">Emacs</a> - Extensible, customizable, free/libre text editor</li>
+    </ul>
+
+    <h3>Installing GCC/MinGW (C/C++ Compiler)</h3>
+    <h4>For Windows:</h4>
+    <ul>
+        <li><a href="https://sourceforge.net/projects/mingw/">MinGW</a> - Minimalist GNU for Windows</li>
+        <li>Installation steps:
+            <ol>
+                <li>Download the MinGW installer</li>
+                <li>Run the installer and select the packages you need (at least gcc-core, gcc-g++)</li>
+                <li>Add MinGW's bin directory to your system's PATH</li>
+            </ol>
+        </li>
+        <li>Alternatively, use Windows Subsystem for Linux (WSL):
+            <ol>
+                <li>Enable WSL through <a href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Features or PowerShell</a></li>
+                <li>Install a Linux distribution from the <a href="https://apps.microsoft.com/detail/9pdxgncfsczv?ocid=webpdpshare">Microsoft Store</a> (e.g., Ubuntu)</li>
+                <li>Open the Linux distribution and update packages:
+                    <pre><code>sudo apt update
+sudo apt upgrade</code></pre>
+                </li>
+                <li>Install GCC:
+                    <pre><code>sudo apt install build-essential</code></pre>
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+    <h4>For Linux:</h4>
+    <ul>
+        <li>Most Linux distributions come with GCC pre-installed</li>
+        <li>To install or update GCC on Ubuntu/Debian:
+            <pre><code>sudo apt update
+sudo apt install build-essential</code></pre>
+        </li>
+        <li>To install on Fedora:
+            <pre><code>sudo dnf install gcc gcc-c++</code></pre>
+        </li>
+        <li>Verify installation:
+            <pre><code>gcc --version
+g++ --version</code></pre>
+        </li>
+    </ul>
+
+    <h2>Web Development</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn">MDN Web Docs</a> - Comprehensive web development documentation</li>
+        <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/">freeCodeCamp - Responsive Web Design</a> - Free interactive course</li>
+        <li><a href="https://www.w3schools.com/">W3Schools</a> - Web development tutorials and references</li>
+    </ul>
+
+    <h2>App Development</h2>
+    <ul>
+        <li><a href="https://developer.android.com/courses">Android Developers</a> - Official Android development courses</li>
+        <li><a href="https://developer.apple.com/tutorials/swiftui">Apple Developer - SwiftUI Tutorials</a> - iOS app development with SwiftUI</li>
+        <li><a href="https://flutter.dev/docs/get-started/codelab">Flutter - Get started</a> - Cross-platform app development</li>
+    </ul>
+
+    <h2>Game Development</h2>
+    <ul>
+        <li><a href="https://unity.com/learn">Unity Learn</a> - Tutorials and courses for Unity engine</li>
+        <li><a href="https://docs.unrealengine.com/5.0/en-US/unreal-engine-5-tutorial-for-beginners/">Unreal Engine 5 Tutorial for Beginners</a> - Getting started with Unreal Engine</li>
+        <li><a href="https://www.pygame.org/wiki/tutorials">Pygame Tutorials</a> - Game development with Python</li>
+    </ul>
+
+    <h2>AI/ML</h2>
+    <ul>
+        <li><a href="https://www.coursera.org/learn/machine-learning">Coursera - Machine Learning</a> - Stanford's popular ML course</li>
+        <li><a href="https://www.tensorflow.org/learn">TensorFlow Tutorials</a> - Official TensorFlow learning resources</li>
+        <li><a href="https://pytorch.org/tutorials/">PyTorch Tutorials</a> - Learn PyTorch for deep learning</li>
+    </ul>
+
+    <h2>Cloud Computing</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/training/">AWS Training and Certification</a> - Amazon Web Services learning paths</li>
+        <li><a href="https://cloud.google.com/training">Google Cloud Training</a> - Google Cloud Platform courses</li>
+        <li><a href="https://docs.microsoft.com/en-us/learn/azure/">Microsoft Learn - Azure</a> - Azure cloud services tutorials</li>
+    </ul>
+
+    <h2>Blockchain</h2>
+    <ul>
+        <li><a href="https://ethereum.org/en/developers/learning-tools/">Ethereum Developer Resources</a> - Learn Ethereum development</li>
+        <li><a href="https://hyperledger-fabric.readthedocs.io/en/release-2.2/tutorials.html">Hyperledger Fabric Tutorials</a> - Enterprise blockchain framework</li>
+        <li><a href="https://developers.eos.io/welcome/latest/tutorials">EOSIO Developer Portal</a> - Blockchain software tutorials</li>
+    </ul>
+
+    <h2>Hardware</h2>
+    <ul>
+        <li><a href="https://www.arduino.cc/en/Tutorial/HomePage">Arduino Tutorials</a> - Getting started with Arduino</li>
+        <li><a href="https://projects.raspberrypi.org/en/projects">Raspberry Pi Projects</a> - Hands-on Raspberry Pi tutorials</li>
+        <li><a href="https://www.edx.org/course/embedded-systems-shape-the-world-microcontroller-i">edX - Embedded Systems Course</a> - Introduction to microcontrollers</li>
+    </ul>
+
+    <h2>Linux</h2>
+    <ul>
+        <li><a href="https://linuxjourney.com/">Linux Journey</a> - Learn the ways of Linux-fu, for free</li>
+        <li><a href="https://www.linux.com/training-tutorials/">Linux.com Tutorials</a> - Various Linux tutorials and guides</li>
+        <li><a href="https://www.edx.org/course/introduction-to-linux">edX - Introduction to Linux</a> - Comprehensive Linux course</li>
+    </ul>
+</body>
+</html>
